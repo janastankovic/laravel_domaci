@@ -12,13 +12,13 @@ class Korpa extends Model
     use HasFactory;
 
 
-    
-    public function parfemirija(){
+    //korpa se odnosi na jedan parfem
+    public function parfem(){
         return $this->belongsTo(Parfem::class);
     }
 
-    //vrati korisnika kome pripada korpa
+    //korpa se odnosi na jednog korisnika
     public function korisnik(){
-        return $this->hasMany(Korisnik::class);
+        return $this->belongTo(Korisnik::class);
     }
 }

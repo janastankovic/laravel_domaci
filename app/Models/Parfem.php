@@ -10,7 +10,7 @@ class Parfem extends Model
 {
     use HasFactory;
 
-    //vrati sve korpe u parfimeriji
+    //za jedan parfem moze da bude vise korpi
     public function korpa(){
         return $this->hasMany(Korpa::class);
     }
